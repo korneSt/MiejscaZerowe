@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox fx:controller="Main"
+        xmlns:fx="http://javafx.com/fxml" alignment="center" styleClass="root">
+<padding> <Insets top="25" right="10" bottom="10" left="25"/> </padding>
+    <GridPane
+              xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="80" vgap="10">
+        <padding> <Insets bottom="20"/> </padding>
+        <Text id="welcome-text" text="Wprowadź dane"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"
+              GridPane.columnSpan="2"/>
+        <Text text="Zmienna a"
+              GridPane.columnIndex="0" GridPane.rowIndex="1"
+              GridPane.columnSpan="2"/>
+        <TextField fx:id="zmiennaA"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Text text="Zmienna b"
+              GridPane.columnIndex="0" GridPane.rowIndex="2"
+              GridPane.columnSpan="2"/>
+        <TextField fx:id="zmiennaB"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Text text = "Zmienna c"
+              GridPane.columnIndex="0" GridPane.rowIndex="3"
+              GridPane.columnSpan="2"/>
+        <TextField fx:id="zmiennaC"
+                GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <HBox spacing="10" alignment="bottom_right"
+              GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button text="Oblicz"
+                    onAction="#handleObliczButtonAction"/>
+        </HBox>
+
+    </GridPane>
+    <Text fx:id="wynikObliczen"
+          GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <stylesheets>
+        <URL value="@SuperStyl.css"/>
+    </stylesheets>
+</VBox>
+
+
