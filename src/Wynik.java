@@ -8,24 +8,15 @@ import static java.lang.Math.*;
 public class Wynik {
 
     public static void wykonaj(TextField tA, TextField tB, TextField tC, Text wynikObliczen){
-        int a=-1, b=-1, c=-1;
+        int a, b, c;
         double wynik, wynik1;
-        boolean czyOK=false;
-        while(!czyOK) {
-            try {
                 a = Integer.parseInt(tA.getText());
                 b = Integer.parseInt(tB.getText());
                 c = Integer.parseInt(tC.getText());
-            } catch (NumberFormatException e) {
-                AlertBox.display("Błąd", "Błąd wprowadzonych danych");
-
-            }
-            czyOK = a == -1? false : true;
-        }
 
         double delta;
         double wyOst, wyOst1;
-            //if (a == 0 && b == 0 && c == 0) AlertBox.display("Błąd", "To nie jest funkcja kwadratowa");
+        if (a == 0 && b == 0 && c == 0) AlertBox.display("Błąd", "To nie jest funkcja kwadratowa");
 
 
 
